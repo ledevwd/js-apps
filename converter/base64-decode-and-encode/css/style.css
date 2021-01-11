@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e7e7e7;
+    font-family: monospace;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background: #003f37;
+}
+
+header h1 {
+    width: 100%;
+}
+
+details {
+    width: 600px;
+    margin: auto;
+    background: #fff;
+    color: #404040;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+details p {
+    padding: 10px;
+    line-height: 1.4;
+}
+
+summary {
+    outline: none;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    background: #029682;
+}
+
+#align-center {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#text {
+    width: 100%;
+    height: 300px;
+    outline: none;
+    resize: none;
+    padding: 20px 30px;
+    font-size: 20px;
+    border: 1px solid #bebebe;
+    box-shadow: 0 0 10px #d8d8d8;
+}
+
+@keyframes error {
+    0% {
+        transform: translate(0);
+        border: 2px solid #fc7a7a;
+        background: #f8dfdf;
+    }
+
+    50% {
+        transform: translate(5px);
+    }
+
+    100% {
+        transform: translate(-5px);
+    }
+}
+
+#btn-encode, #btn-decode {
+    width: calc(50% - 20px);
+    font-size: 20px;
+    padding: 15px;
+    text-transform: uppercase;
+    margin: 20px 0;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+    border: 1px solid #bebebe;
+    box-shadow: 0 0 10px #d8d8d8;
+    color: #fff;
+}
+
+#btn-encode {
+    background: #41d441;
+    float: left;
+}
+
+#btn-encode:hover {
+    background: #33b633;
+}
+
+#btn-decode {
+    background: #fc7a7a;
+    float: right;
+}
+
+#btn-decode:hover {
+    background: #e26c6c;
+}
+
+#output {
+    width: 100%;
+    height: 200px;
+    background: #404040;
+    clear: both;
+    box-shadow: 0 0 10px #686868;
+    font-size: 20px;
+    padding: 20px 30px;
+    color: #fff;
+    overflow-Y: auto;
+    word-wrap: break-word;
+}
+
+.output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 50px;
+    background: #003f37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+a {
+    color: #bebebe;
+}
+
+@media screen and (max-width: 701px) {
+    details, #align-center {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    #btn-encode, #btn-decode {
+        width: 100%;
+        float: none;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    #output {
+        margin-top: 10px;
+    }
+}
