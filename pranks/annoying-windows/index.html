@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #424242;
+        }
+
+        #loading, #load::after, #terms-and-use {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #loading {
+            width: 300px;
+            padding: 10px;
+        }
+
+        #loading h1 {
+            color: #e0dede;
+            font-family: monospace;
+            font-weight: normal;
+            font-size: 3rem;
+            margin: 40px 0;
+            text-align: center;
+            text-shadow: 0 0 10px #272727;
+        }
+
+        #load {
+            width: 200px;
+            height: 200px;
+            background: #4193ff;
+            border-radius: 50%;
+            position: relative;
+            animation: animatedLoad 1.2s linear infinite;
+            margin: auto;
+            box-shadow: 0 0 10px #272727;
+        }
+
+        @keyframes animatedLoad {
+            0% {
+                transform: rotate(0);
+            }
+
+            50% {
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #load::after {
+            content: "";
+            width: 180px;
+            height: 180px;
+            background: #424242;
+            border-radius: 50%;
+        }
+
+        #load::before {
+            content: "";
+            width: 180px;
+            height: 180px;
+            position: absolute;
+            left: 50%;
+            top: -5px;
+            transform: translate(-50%, 0);
+            background: linear-gradient(to left, #4193ff, #9cc5fa, #4193ff);
+            border-radius: 50%;
+        }
+
+        #terms-and-use {
+            width: 600px;
+            height: auto;
+            margin: auto;
+            background: #fff;
+            padding: 10px 20px;
+            font-family: arial;
+            display: none;
+            box-shadow: 0 0 10px #2b2b2b;
+        }
+
+        #terms-and-use h1, dt {
+            color: #424242;
+        }
+
+        section {
+            height: 200px;
+            overflow-y: scroll;
+            padding: 1px 10px;
+            border: 1px solid #cacaca;
+        }
+
+        #box {
+            background: #eeeded;
+            margin: 20px 0;
+        }
+
+        dt {
+            margin: 20px 0;
+        }
+
+        dd {
+            color: #616161;
+            margin-bottom: 60px;
+        }
+
+        #align {
+            float: right;
+        }
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            margin: 20px 5px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        #btn-no {
+            background: #e0e0e0;
+        }
+
+        #btn-no:hover {
+            background: #cacaca;
+        }
+
+        #btn-yes {
+            background: #005CC8;
+            color: #fff;
+        }
+
+        #btn-yes:hover {
+            background: #024fa7;
+        }
+
+        #error {
+            color: #ff0000;
+            margin-top: 5px;
+            display: none;
+        }
+
+        @media screen and (max-width: 650px) {
+            #terms-and-use {
+                width: calc(100% - 30px);
+            }
+        }
+
+        @media screen and (max-width: 601px) {
+            #loading {
+                transform: translate(-50%, -50%) scale(0.7);
+            }
+        }
+
+        @media screen and (max-width: 301px) {
+            #loading {
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <h1>Carregando</h1>
+        <div id="load"></div>
+    </div>
+    <div id="terms-and-use">
+        <h1>Termos e Uso</h1>
+        <div id="box">
+            <section>
+                <div id="box">
+                    <dl>
+                        <dt><strong>Acceptance of adobe terms of use</strong></dt>
+                        <dd>
+                            Sed mattis, felis eu dictum eleifend, mauris libero fringilla est, quis molestie lacus neque
+                            malesuada dui. Praesent ac urna tempus odio elementum pulvinar non id erat. Nullam sed turpis
+                            ut ipsum imperdiet suscipit. Nullam eget massa tincidunt, condimentum erat quis, rhoncus sapien.
+                            Integer consectetur fringilla malesuada. Mauris pellentesque auctor luctus. Maecenas ac pulvinar
+                            risus. Nullam viverra eros bibendum, auctor nisl vel, gravida tortor. Ut pulvinar dolor a sapien
+                            pretium, commodo tincidunt ipsum ornare. Curabitur ultrices varius orci vitae malesuada. Curabitur
+                            sodales enim eget lobortis luctus. Curabitur vitae mauris non est rhoncus interdum. Pellentesque
+                            at eleifend elit, vitae porta nulla. Maecenas scelerisque imperdiet diam sed hendrerit. Proin
+                            consectetur nisi eleifend, tempus leo eget, ullamcorper risus.
+                            Hendrerit tellus eget posuere dignissim. Mauris molestie dui augue, ac auctor orci placerat
+                            ac. Praesent vel dolor id nibh rhoncus consequat. Class aptent taciti sociosqu ad litora torquent
+                            per conubia nostra, per inceptos himenaeos. Pellentesque semper ante vel tellus gravida porttitor
+                            nec vitae dui. Curabitur sollicitudin risus eu vehicula tristique. Phasellus nec leo mollis,
+                            vehicula lacus non, ultrices mi. Praesent molestie ante ex, in tempor metus vehicula id. Curabitur
+                            et porta dui. Aenean mattis tincidunt arcu, quis cursus ligula finibus nec. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed gravida auctor orci.
+                            Aenean non ipsum diam.
+                        </dd>
+                        <dt><strong>Why I should accept these terms?</strong></dt>
+                        <dd>
+                            Morbi erat turpis, rhoncus sed dapibus eu, convallis vitae mauris. In condimentum ullamcorper
+                            metus vel varius. Praesent eleifend velit eget quam egestas malesuada. Sed sit amet ornare purus.
+                            Integer diam dolor, condimentum non commodo vel, pulvinar sed nibh. Pellentesque elementum
+                            volutpat diam, at accumsan sapien varius tincidunt. Praesent lectus sapien, suscipit nec mauris
+                            ac, faucibus tempor tortor. Duis sit amet est in nisi fringilla luctus. Nunc quis nunc vulputate,
+                            iaculis lectus ut, porttitor ex. Donec rhoncus nec tortor ac mattis. Sed porta eget enim faucibus
+                            iaculis. Sed semper viverra imperdiet.
+                            Nullam sed turpis ut ipsum imperdiet suscipit. Nullam eget massa tincidunt, condimentum erat quis,
+                            rhoncus sapien. Integer consectetur fringilla malesuada. Mauris pellentesque auctor luctus. Maecenas
+                            ac pulvinar risus. Nullam viverra eros bibendum, auctor nisl vel, gravida tortor. Ut pulvinar dolor
+                            a sapien pretium, commodo tincidunt ipsum ornare. Curabitur ultrices varius orci vitae malesuada.
+                            Curabitur sodales enim eget lobortis luctus. Curabitur vitae mauris non est rhoncus interdum.
+                            Pellentesque at eleifend elit, vitae porta nulla. Maecenas scelerisque imperdiet diam sed hendrerit.
+                            Proin consectetur nisi eleifend, tempus leo eget, ullamcorper risus.
+                        </dd>
+                        <dt><strong>License and restriction usage</strong></dt>
+                        <dd>
+                            Cras pellentesque elit vitae lectus suscipit auctor. Ut aliquet, tellus pulvinar egestas tempor,
+                            lacus ligula interdum lorem, vitae fermentum mi quam ut nulla. Mauris non ultricies orci. Sed
+                            non sapien sagittis, eleifend orci quis, luctus arcu. Ut luctus ut dolor sed venenatis. Nunc at
+                            iaculis mi. Proin augue diam, dignissim id tristique non, cursus vel lorem. Donec vel magna id
+                            dui pretium porttitor eget non ante. Etiam tempus ornare risus, in aliquam turpis condimentum
+                            consequat. Maecenas scelerisque mattis velit, eget pretium eros imperdiet eget. Vestibulum euismod
+                            nisi ex, vel vehicula ipsum placerat non. Aenean justo tellus, vestibulum in venenatis sit amet,
+                            tristique tincidunt lacus. Curabitur venenatis libero eget elementum malesuada. Vestibulum interdum
+                            pretium justo, aliquet rutrum odio cursus ut. Pellentesque tincidunt semper magna. Nunc auctor urna
+                            sit amet consequat feugiat.
+                        </dd>
+                        <dt><strong>What types of data do we use yours?</strong></dt>
+                        <dd>
+                            Integer hendrerit tellus eget posuere dignissim. Mauris molestie dui augue, ac auctor orci placerat
+                            ac. Praesent vel dolor id nibh rhoncus consequat. Class aptent taciti sociosqu ad litora torquent
+                            per conubia nostra, per inceptos himenaeos. Pellentesque semper ante vel tellus gravida porttitor
+                            nec vitae dui. Curabitur sollicitudin risus eu vehicula tristique. Phasellus nec leo mollis,
+                            vehicula lacus non, ultrices mi. Praesent molestie ante ex, in tempor metus vehicula id. Curabitur
+                            et porta dui. Aenean mattis tincidunt arcu, quis cursus ligula finibus nec. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed gravida auctor orci.
+                            Aenean non ipsum diam.
+                            Hendrerit tellus eget posuere dignissim. Mauris molestie dui augue, ac auctor orci placerat
+                            ac. Praesent vel dolor id nibh rhoncus consequat. Class aptent taciti sociosqu ad litora torquent
+                            per conubia nostra, per inceptos himenaeos. Pellentesque semper ante vel tellus gravida porttitor
+                            nec vitae dui. Curabitur sollicitudin risus eu vehicula tristique. Phasellus nec leo mollis,
+                            vehicula lacus non, ultrices mi. Praesent molestie ante ex, in tempor metus vehicula id. Curabitur
+                            et porta dui. Aenean mattis tincidunt arcu, quis cursus ligula finibus nec. Pellentesque habitant
+                            morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed gravida auctor orci.
+                            Aenean non ipsum diam.
+                        </dd>
+                        <dt><strong>What will happen when you agree?</strong></dt>
+                        <dd>
+                            Clicking on the "agree" button means that you have read or not read the terms of use on this page
+                            which makes it clear that you have agreed to the terms of use or whatever we are going to do from
+                            now on, for example, using your data or whatever , you give us free access (permissions) to make
+                            use of it. What will happen when you click the button will be just annoying windows opening non-stop
+                            and at random positions on your computer screen these same windows will open in a very short interval
+                            and go into an infinite loop which means that your computer will be able to freeze on account of this.
+                            The moment this happens you may lose data in third-party programs, as the computer will consume a lot
+                            of the computer's CPU and may crash not only its respective browser, but other programs.
+                        </dd>
+                    </dl>
+                </div>
+            </section>
+        </div>
+        <p><label for="btn-checked"><input id="btn-checked" type="checkbox"> li e concordo com os termos de uso e política de privacidade.</label></p>
+        <p id="error">Você deve aceitar os <strong>Termos e Uso</strong> para prosseguir.</p>
+        <div id="align">
+            <button id="btn-no" type="button">Não aceitar</button>
+            <button id="btn-yes" type="button">Aceitar</button>
+        </div>
+    </div>
+    <script>
+        let error = document.querySelector("#error");
+        let btnYes = document.querySelector("#btn-yes");
+        let termsAndUse = document.querySelector("#terms-and-use");
+
+        window.setTimeout(() => {
+            let loading = document.querySelector("#loading");
+
+            loading.style.display = "none";
+            termsAndUse.style.display = "block";
+        }, 3000);
+
+        btnYes.onclick = () => {
+            let btnChecked = document.querySelector("#btn-checked");
+
+            if (btnChecked.checked) {
+                let x;
+                let y;
+                
+                error.style.display = "none";
+                termsAndUse.innerHTML = "Hbilite o pop-up (ou desbloqueie para esta página), caso necessário atualize a página.";
+    
+                for (let i = 0; i < (window.innerWidth ** window.innerHeight); i ++) {
+                    x = Math.floor(Math.random() * 1600);
+                    y = Math.floor(Math.random() * 1000);
+
+                    window.open("you-opened-me.html", "_blank", `width=150, height=150, left=${x}, top=${y}`);
+                    window.open("you-opened-me.html", "_blank");
+                }
+            }
+
+            else {
+                error.style.display = "block";
+            }
+        };
+    </script>
+</body>
+</html>
